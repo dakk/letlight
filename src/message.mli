@@ -1,20 +1,23 @@
+open Bitcoinml
+open Bitstring
+
 module Init : sig
   type t = {
-    global_features : int;
-    local_features  : int;
+    global_features : bytes;
+    local_features  : bytes;
   }
 
-  val parse     : Bitstring.t -> t
+  val parse     : Bitstring.t -> t option
   val serialize : t -> bytes
 end
 
 module Error : sig
   type t = {
-    channel_id   : bytes;
+    channel_id   : Hash.t;
     data         : bytes;
   }
 
-  val parse     : Bitstring.t -> t
+  val parse     : Bitstring.t -> t option
   val serialize : t -> bytes
 end
 
@@ -24,7 +27,7 @@ module Ping : sig
     data      : bytes;
   }
 
-  val parse     : Bitstring.t -> t
+  val parse     : Bitstring.t -> t option
   val serialize : t -> bytes
 end
 
@@ -33,16 +36,16 @@ module Pong : sig
     data : bytes;
   }
 
-  val parse     : Bitstring.t -> t
+  val parse     : Bitstring.t -> t option
   val serialize : t -> bytes
 end
+
 
 type t = 
 | INIT of Init.t
 | ERROR of Error.t
 | PING of Ping.t
 | PONG of Pong.t
-| INVALID of bytes
 
-val parse     : bytes -> t
+val parse     : bytes -> t option
 val serialize : t -> bytes

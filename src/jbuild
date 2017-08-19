@@ -3,4 +3,5 @@
 (executable
  ((name letlight)
   (public_name letlight)
-  (libraries (bitcoinml))))
+  (preprocess (pps (ppx_bitstring)))
+  (libraries (bitcoinml bitstring))))
