@@ -1,0 +1,7 @@
+(jbuild_version 1)
+
+(library
+ ((name        protocol)
+  (preprocess (pps (ppx_bitstring)))
+  (libraries (bitstring stdint bitcoinml))))
+

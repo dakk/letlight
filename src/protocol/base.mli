@@ -39,13 +39,3 @@ module Pong : sig
   val parse     : Bitstring.t -> t option
   val serialize : t -> bytes
 end
-
-
-type t = 
-| INIT of Init.t
-| ERROR of Error.t
-| PING of Ping.t
-| PONG of Pong.t
-
-val parse     : bytes -> t option
-val serialize : t -> bytes

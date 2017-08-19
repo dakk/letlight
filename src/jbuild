@@ -4,4 +4,4 @@
  ((name letlight)
   (public_name letlight)
   (preprocess (pps (ppx_bitstring)))
-  (libraries (bitcoinml bitstring))))
+  (libraries (bitcoinml bitstring protocol))))
