@@ -3,7 +3,8 @@ lib: [
   "_build/install/default/lib/letlight/opam" {"opam"}
 ]
 bin: [
-  "_build/install/default/bin/letlight" {"letlight"}
+  "_build/install/default/bin/letlight-cli" {"letlight-cli"}
+  "_build/install/default/bin/letlightd" {"letlightd"}
 ]
 doc: [
   "_build/install/default/doc/letlight/README.md"
