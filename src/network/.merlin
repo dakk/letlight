@@ -1,7 +1,6 @@
-B ../_build/default/src
-B ../_build/default/src/network
-B ../_build/default/src/protocol
-FLG -w -40
+B ../../_build/default/src/network
+B ../../_build/default/src/protocol
+FLG -open Network -w -40
 PKG base
 PKG base.caml
 PKG base.shadow_stdlib
@@ -9,7 +8,6 @@ PKG bigarray
 PKG bignum
 PKG bin_prot
 PKG bin_prot.shape
-PKG biniou
 PKG bitcoinml
 PKG bitstring
 PKG bytes
@@ -19,15 +17,8 @@ PKG core_kernel
 PKG core_kernel.base_for_tests
 PKG cryptokit
 PKG dynlink
-PKG easy-format
 PKG fieldslib
 PKG jane-street-headers
-PKG letchain
-PKG letchain.api
-PKG letchain.blockchain
-PKG letchain.network
-PKG letchain.utils
-PKG leveldb
 PKG num
 PKG num.core
 PKG ocaml-compiler-libs.common
@@ -89,12 +80,8 @@ PKG sexplib
 PKG sexplib.0
 PKG stdint
 PKG stdio
-PKG threads
-PKG threads.posix
 PKG typerep
 PKG unix
 PKG variantslib
-PKG yojson
 PKG zarith
-S network
-S protocol
+S ../protocol
