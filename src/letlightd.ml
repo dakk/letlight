@@ -28,6 +28,7 @@ let main () =
   printf "<letlightd> directory: %s\n%!" (Letchain.get_directory lc);
   printf "<letlightd> starting from block %s %d\n%!" (Letchain.get_last_block lc).header.hash (Int64.to_int (Letchain.get_height lc));
 
+  let rpc = Rpc.init 9090 in
   loop (init ()) lc @@ Letchain.get_last_block lc;
 
   Letchain.stop lc;
