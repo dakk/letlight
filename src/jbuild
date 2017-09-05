@@ -3,4 +3,4 @@
 (executable
  ((name letlightd)
   (public_name letlightd)
-  (libraries (bitcoinml protocol network letchain))))
+  (libraries (bitcoinml protocol letchain))))

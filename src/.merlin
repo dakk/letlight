@@ -1,5 +1,4 @@
 B ../_build/default/src
-B ../_build/default/src/network
 B ../_build/default/src/protocol
 FLG -w -40
 PKG base
@@ -96,5 +95,4 @@ PKG unix
 PKG variantslib
 PKG yojson
 PKG zarith
-S network
 S protocol
